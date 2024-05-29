@@ -38,8 +38,19 @@ createApp({
     
     },
     methods: {
-        imgVisible: function(index){
-            slides[index]
+        nextImg: function(){
+            if(this.myIndex < this.slides.length -1){
+                this.myIndex++ 
+            }else{
+                this.myIndex=0
+            }
+        },
+        prevImg: function(){
+            if(this.myIndex > 0){
+                this.myIndex--
+            }else{
+                this.myIndex=this.slides.length-1
+            }
         }
     }
 }).mount('#app')
