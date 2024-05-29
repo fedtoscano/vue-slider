@@ -32,6 +32,12 @@
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>
             </div>
+
+            <div class="thumbnail-container">
+                <div v-for="(image, index) in slides" class="thumbnail-image-container">
+                    <img :src="image.image" :alt="image.title"  :class="{thumbnailActive: index===slides.index}">
+                </div>
+            </div>
         </div>
     </div>
 

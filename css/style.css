@@ -7,8 +7,8 @@
 .container {
     height: 100vh;
     display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
+    flex-direction: column;
+    margin: 4rem ;
 }
 
 .item {
@@ -38,7 +38,13 @@
 }
 
 i{
-    font-size: 5rem;
+    font-size: 3rem;
+}
+
+button{
+    background-color: white;
+    border: none;
+    margin: 0 1em;
 }
 
 .active{
@@ -47,4 +53,24 @@ i{
 
 .inactive{
     display: none;
+}
+
+.thumbnail-container{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+.thumbnail-image-container{
+    width: 10%;
+    height: 15%;
+    /* object-fit: contain; */
+}
+.thumbnail-image-container>img{
+    width: 100%;
+    opacity: 0.5;
+    /* object-fit: contain; */
+}
+
+.thumbnailActive{
+    opacity: 1;
 }
