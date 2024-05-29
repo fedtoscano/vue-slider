@@ -14,9 +14,11 @@
     <div id="app">
         <div class="container">
             <div class="slider-wrapper" tabindex="0">
-                <i class="fa-solid fa-arrow-right"></i>
-                <div v-for="(slide, index) in slides" :key="index" class="item">
-                    <img :src="slides[index].image" :alt="slides[index].title" />
+                <button>
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <div v-for="(slide, index) in slides" :key="index" class="item" :class="{active: myIndex===index, inactive: myIndex!==index}">
+                    <img :src="slides[index].image" :alt="slide.title"/>
                     <div class="text">
                         <h3>
                             {{slide.title}}
@@ -26,6 +28,9 @@
                         </p>
                     </div>
                 </div>
+                <button>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
             </div>
         </div>
     </div>
